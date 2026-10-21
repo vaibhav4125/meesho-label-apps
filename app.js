@@ -16,6 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
   setupUploadDropzone();
   setupSampleLoader();
   setupSearchInputs();
+  // Sync view mode buttons with initial state (defaults to By SKU like yesterday)
+  const btnMerged = document.getElementById("btn-view-merged");
+  const btnSku = document.getElementById("btn-view-sku");
+  const btnFlat = document.getElementById("btn-view-flat");
+  if (btnMerged) btnMerged.className = currentSkuViewMode === "merged" ? "btn btn-sm btn-primary" : "btn btn-sm btn-secondary";
+  if (btnSku) btnSku.className = currentSkuViewMode === "sku" ? "btn btn-sm btn-primary" : "btn btn-sm btn-secondary";
+  if (btnFlat) btnFlat.className = currentSkuViewMode === "flat" ? "btn btn-sm btn-primary" : "btn btn-sm btn-secondary";
+
   loadCategories();
   loadDashboard();
   checkCloudServerStatus();
@@ -539,14 +547,22 @@ function copyLiveUrl(type) {
 
 
 // --- 1. Dashboard & All SKUs Color Breakdown ---
-// --- 1. Dashboard & All SKUs Color Breakdown ---
-let currentSkuViewMode = "merged"; // "merged" | "sku" | "flat"
+let currentSkuViewMode = (function() {
+  try {
+    return localStorage.getItem("meesho_sku_view_mode") || "sku";
+  } catch(e) {
+    return "sku";
+  }
+})(); // Defaults to "sku" (Catalog SKU / Design Name view like 1001, 1002, 1003...)
 let allProductsExpanded = false;
 let skuColorData = null;
 let skuColorSearchTimer = null;
 
 function setSkuViewMode(mode) {
   currentSkuViewMode = mode;
+  try {
+    localStorage.setItem("meesho_sku_view_mode", mode);
+  } catch(e) {}
   const btnMerged = document.getElementById("btn-view-merged");
   const btnSku = document.getElementById("btn-view-sku");
   const btnFlat = document.getElementById("btn-view-flat");

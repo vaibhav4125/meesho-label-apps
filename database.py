@@ -15,6 +15,24 @@ os.makedirs(BACKUP_DIR, exist_ok=True)
 DB_PATH = os.environ.get("MEESHO_DB_PATH", os.path.join(DATA_DIR, "meesho_orders.db"))
 PERSISTENT_MAPPINGS_FILE = os.path.join(DATA_DIR, "sku_mappings_persistent.json")
 
+def find_persistent_mappings_file(custom_path: str = None) -> str:
+    """Robustly locate the SKU mappings JSON file across root and data directories."""
+    if custom_path and os.path.exists(custom_path):
+        return custom_path
+    candidates = [
+        PERSISTENT_MAPPINGS_FILE,
+        os.path.join(BASE_DIR, "data", "sku_mappings_persistent.json"),
+        os.path.join(BASE_DIR, "sku_mappings_persistent.json"),
+        os.path.join(_cur_dir, "data", "sku_mappings_persistent.json"),
+        os.path.join(_cur_dir, "sku_mappings_persistent.json"),
+        os.path.join(os.getcwd(), "data", "sku_mappings_persistent.json"),
+        os.path.join(os.getcwd(), "sku_mappings_persistent.json"),
+    ]
+    for c in candidates:
+        if c and os.path.exists(c):
+            return c
+    return PERSISTENT_MAPPINGS_FILE
+
 def get_connection():
     db_path = os.environ.get("MEESHO_DB_PATH", DB_PATH)
     conn = sqlite3.connect(db_path, check_same_thread=False)
@@ -167,10 +185,10 @@ def init_db():
     # (Skip during pytest test runs where a temporary test database is used)
     is_test_env = "test" in os.environ.get("MEESHO_DB_PATH", "").lower()
     if not is_test_env:
-        if os.path.exists(PERSISTENT_MAPPINGS_FILE):
-            # Restore any groups or mappings from the permanent JSON file
-            restore_sku_mappings_from_json(force=False)
-            # Re-sync any new DB groups back into JSON
+        active_json = find_persistent_mappings_file()
+        if os.path.exists(active_json):
+            res = restore_sku_mappings_from_json(active_json, force=True)
+            print(f"[OK] Startup: Restored {res.get('restored_groups', 0)} groups and {res.get('restored_skus', 0)} SKU mappings from {active_json}")
             save_sku_mappings_to_json()
         else:
             # If persistent file doesn't exist yet, create it from current DB
@@ -339,7 +357,7 @@ def restore_sku_mappings_from_json(json_path: str = None, force: bool = False):
     if json_path is None and is_test_env:
         return {"restored_groups": 0, "restored_skus": 0, "message": "Test environment, skipping default restore"}
 
-    target_path = json_path or PERSISTENT_MAPPINGS_FILE
+    target_path = find_persistent_mappings_file(json_path)
     if not os.path.exists(target_path):
         return {"restored_groups": 0, "restored_skus": 0, "message": "No backup file found"}
 
