@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "saved_at": "2026-10-21T05:38:44.015651",
-  "total_groups": 32,
+  "saved_at": "2026-10-21T15:24:01.743514",
+  "total_groups": 50,
   "total_mappings": 330,
   "categories": [
     {
@@ -257,10 +257,238 @@
       "display_order": 0,
       "created_at": "2026-10-15 14:37:27",
       "updated_at": "2026-10-18 04:32:47",
+      "skus": []
+    },
+    {
+      "id": 65,
+      "name": "( BEST MOOD ) PLAZO PAR - Lavender11",
+      "category": "Plazo",
+      "display_order": 1,
+      "created_at": "2026-10-21 09:53:36",
+      "updated_at": "2026-10-21 09:53:36",
+      "skus": []
+    },
+    {
+      "id": 66,
+      "name": "( BEST MOOD ) PLAZO PAR 1001",
+      "category": "Plazo",
+      "display_order": 1,
+      "created_at": "2026-10-21 09:53:36",
+      "updated_at": "2026-10-21 09:53:36",
       "skus": [
-        "FULL SLEEVE T SHIRT AND PLAZZO.NEW YORK ( C GREEN )",
-        "FULL SLEEVE T SHIRT AND PLAZZO.NEW YORK ( PINK )",
-        "FULL SLEEVE T SHIRT AND PLAZZO.NEW YORK ( SKY )"
+        "( BEST MOOD  ) PLAZO PAR 1001 - Lavender",
+        "( BEST MOOD  ) PLAZO PAR 1001- C.Green",
+        "( BEST MOOD  ) PLAZO PAR 1001- Chiku",
+        "( BEST MOOD  ) PLAZO PAR 1001- Grey",
+        "( BEST MOOD  ) PLAZO PAR 1001- Pista",
+        "( BEST MOOD  ) PLAZO PAR 1001- Sky Blue",
+        "( BEST MOOD  ) PLAZO PAR 1001- White",
+        "(Best mood ) PLAZO PAR - Lavender11-12 Years",
+        "(Best mood ) PLAZO PAR - Lavender;",
+        "(Best mood ) PLAZO PAR- Grey;",
+        "(Best mood ) PLAZO PAR- Sky Blue",
+        "(Best mood ) PLAZO PAR-White;"
+      ]
+    },
+    {
+      "id": 67,
+      "name": "( BEST MOOD ) PLAZO PAR 1002",
+      "category": "Plazo",
+      "display_order": 1,
+      "created_at": "2026-10-21 09:53:36",
+      "updated_at": "2026-10-21 09:53:36",
+      "skus": [
+        "( BEST MOOD  ) PLAZO PAR 1002 - Lavender",
+        "( BEST MOOD  ) PLAZO PAR 1002 - Pink",
+        "( BEST MOOD  ) PLAZO PAR 1002- C.Green",
+        "( BEST MOOD  ) PLAZO PAR 1002- Chiku",
+        "( BEST MOOD  ) PLAZO PAR 1002- Grey",
+        "( BEST MOOD  ) PLAZO PAR 1002- Pista",
+        "( BEST MOOD  ) PLAZO PAR 1002- Sky Blue",
+        "( BEST MOOD  ) PLAZO PAR 1002- White"
+      ]
+    },
+    {
+      "id": 68,
+      "name": "( BEST MOOD ) PLAZO PAR 1003",
+      "category": "Plazo",
+      "display_order": 1,
+      "created_at": "2026-10-21 09:53:36",
+      "updated_at": "2026-10-21 09:53:36",
+      "skus": [
+        "( BEST MOOD  ) PLAZO PAR 1003 - Lavender",
+        "( BEST MOOD  ) PLAZO PAR 1003 - Pink",
+        "( BEST MOOD  ) PLAZO PAR 1003- C.Green",
+        "( BEST MOOD  ) PLAZO PAR 1003- Chiku",
+        "( BEST MOOD  ) PLAZO PAR 1003- Grey",
+        "( BEST MOOD  ) PLAZO PAR 1003- Pista",
+        "( BEST MOOD  ) PLAZO PAR 1003- Sky Blue",
+        "( BEST MOOD  ) PLAZO PAR 1003- White"
+      ]
+    },
+    {
+      "id": 69,
+      "name": "( BEST MOOD ) PLAZO PAR 1004",
+      "category": "Plazo",
+      "display_order": 1,
+      "created_at": "2026-10-21 09:53:36",
+      "updated_at": "2026-10-21 09:53:36",
+      "skus": [
+        "( BEST MOOD  ) PLAZO PAR 1004 - Lavender",
+        "( BEST MOOD  ) PLAZO PAR 1004 - Pink",
+        "( BEST MOOD  ) PLAZO PAR 1004- C.Green",
+        "( BEST MOOD  ) PLAZO PAR 1004- Chiku",
+        "( BEST MOOD  ) PLAZO PAR 1004- Grey",
+        "( BEST MOOD  ) PLAZO PAR 1004- Pista",
+        "( BEST MOOD  ) PLAZO PAR 1004- Sky Blue"
+      ]
+    },
+    {
+      "id": 70,
+      "name": "( BEST MOOD ) PLAZO PAR 1005",
+      "category": "Plazo",
+      "display_order": 1,
+      "created_at": "2026-10-21 09:53:36",
+      "updated_at": "2026-10-21 09:53:36",
+      "skus": [
+        "( BEST MOOD  ) PLAZO PAR 1005 - Pink",
+        "( BEST MOOD  ) PLAZO PAR 1005- C.Green",
+        "( BEST MOOD  ) PLAZO PAR 1005- Pista",
+        "( BEST MOOD  ) PLAZO PAR 1005- Sky Blue"
+      ]
+    },
+    {
+      "id": 71,
+      "name": "( BEST MOOD ) PLAZO PAR 1006",
+      "category": "Plazo",
+      "display_order": 1,
+      "created_at": "2026-10-21 09:53:36",
+      "updated_at": "2026-10-21 09:53:36",
+      "skus": [
+        "( BEST MOOD  ) PLAZO PAR 1006 - Lavender",
+        "( BEST MOOD  ) PLAZO PAR 1006 - Pink",
+        "( BEST MOOD  ) PLAZO PAR 1006- C.Green",
+        "( BEST MOOD  ) PLAZO PAR 1006- Chiku",
+        "( BEST MOOD  ) PLAZO PAR 1006- Grey",
+        "( BEST MOOD  ) PLAZO PAR 1006- Pista",
+        "( BEST MOOD  ) PLAZO PAR 1006- Sky Blue",
+        "( BEST MOOD  ) PLAZO PAR 1006- White"
+      ]
+    },
+    {
+      "id": 72,
+      "name": "( BEST MOOD ) PLAZO PAR 1007",
+      "category": "Plazo",
+      "display_order": 1,
+      "created_at": "2026-10-21 09:53:36",
+      "updated_at": "2026-10-21 09:53:36",
+      "skus": [
+        "(  BEST MOODE  ) PLAZO PAR 1007- Chiku",
+        "(  BEST MOODE  ) PLAZO PAR 1007- Grey",
+        "(  BEST MOODE  ) PLAZO PAR 1007- Lavender",
+        "(  BEST MOODE  ) PLAZO PAR 1007- Pink",
+        "(  BEST MOODE  ) PLAZO PAR 1007- Pista",
+        "(  BEST MOODE  ) PLAZO PAR 1007- Sky Blue",
+        "(  BEST MOODE  ) PLAZO PAR 1007-C.Green"
+      ]
+    },
+    {
+      "id": 73,
+      "name": "( BEST MOOD ) PLAZO PAR 1008",
+      "category": "Plazo",
+      "display_order": 1,
+      "created_at": "2026-10-21 09:53:36",
+      "updated_at": "2026-10-21 09:53:36",
+      "skus": [
+        "(  BEST MOODE  ) PLAZO PAR 1008- Chiku",
+        "(  BEST MOODE  ) PLAZO PAR 1008- Grey",
+        "(  BEST MOODE  ) PLAZO PAR 1008- Lavender",
+        "(  BEST MOODE  ) PLAZO PAR 1008- Pink",
+        "(  BEST MOODE  ) PLAZO PAR 1008- Sky Blue",
+        "(  BEST MOODE  ) PLAZO PAR 1008-C.Green",
+        "(  BEST MOODE  ) PLAZO PAR 1008-White"
+      ]
+    },
+    {
+      "id": 74,
+      "name": "( BEST MOOD ) PLAZO PAR 1010",
+      "category": "Plazo",
+      "display_order": 1,
+      "created_at": "2026-10-21 09:53:36",
+      "updated_at": "2026-10-21 09:53:36",
+      "skus": [
+        "(  BEST MOODE  ) PLAZO PAR 1010- Chiku",
+        "(  BEST MOODE  ) PLAZO PAR 1010- Pink"
+      ]
+    },
+    {
+      "id": 75,
+      "name": "( NICE ) PLAZO PAR 1001",
+      "category": "Plazo",
+      "display_order": 1,
+      "created_at": "2026-10-21 09:53:36",
+      "updated_at": "2026-10-21 09:53:36",
+      "skus": [
+        "( NICE  ) PLAZO PAR 1001 - Lavender"
+      ]
+    },
+    {
+      "id": 76,
+      "name": "( NICE ) PLAZO PAR 1002",
+      "category": "Plazo",
+      "display_order": 1,
+      "created_at": "2026-10-21 09:53:36",
+      "updated_at": "2026-10-21 09:53:36",
+      "skus": [
+        "( NICE  ) PLAZO PAR 1002 - Pink",
+        "( NICE  ) PLAZO PAR 1002- Chiku",
+        "( NICE  ) PLAZO PAR 1002- Grey",
+        "( NICE  ) PLAZO PAR 1002-White"
+      ]
+    },
+    {
+      "id": 77,
+      "name": "( NICE ) PLAZO PAR 1003",
+      "category": "Plazo",
+      "display_order": 1,
+      "created_at": "2026-10-21 09:53:36",
+      "updated_at": "2026-10-21 09:53:36",
+      "skus": [
+        "( NICE  ) PLAZO PAR 1003 - Lavender",
+        "( NICE  ) PLAZO PAR 1003 - Pink",
+        "( NICE  ) PLAZO PAR 1003- Chiku",
+        "( NICE  ) PLAZO PAR 1003- Grey",
+        "( NICE  ) PLAZO PAR 1003- Pista"
+      ]
+    },
+    {
+      "id": 78,
+      "name": "( NICE ) PLAZO PAR 1004",
+      "category": "Plazo",
+      "display_order": 1,
+      "created_at": "2026-10-21 09:53:36",
+      "updated_at": "2026-10-21 09:53:36",
+      "skus": [
+        "( NICE  ) PLAZO PAR 1004 - Lavender",
+        "( NICE  ) PLAZO PAR 1004 - Pink",
+        "( NICE  ) PLAZO PAR 1004- Chiku",
+        "( NICE  ) PLAZO PAR 1004- Grey",
+        "( NICE  ) PLAZO PAR 1004- Pista",
+        "( NICE  ) PLAZO PAR 1004- Sky Blue",
+        "( NICE  ) PLAZO PAR 1004-White"
+      ]
+    },
+    {
+      "id": 79,
+      "name": "( NICE ) PLAZO PAR 1005",
+      "category": "Plazo",
+      "display_order": 1,
+      "created_at": "2026-10-21 09:53:36",
+      "updated_at": "2026-10-21 09:53:36",
+      "skus": [
+        "( NICE  ) PLAZO PAR 1005 - Pink",
+        "( NICE  ) PLAZO PAR 1005- Chiku",
+        "( NICE  ) PLAZO PAR 1005- Grey"
       ]
     },
     {
@@ -270,71 +498,7 @@
       "display_order": 1,
       "created_at": "2026-10-12 10:46:56",
       "updated_at": "2026-10-20 03:46:32",
-      "skus": [
-        "(  BEST MOODE  ) PLAZO PAR 1007- Chiku",
-        "(  BEST MOODE  ) PLAZO PAR 1007- Grey",
-        "(  BEST MOODE  ) PLAZO PAR 1007- Lavender",
-        "(  BEST MOODE  ) PLAZO PAR 1007- Pink",
-        "(  BEST MOODE  ) PLAZO PAR 1007- Pista",
-        "(  BEST MOODE  ) PLAZO PAR 1007- Sky Blue",
-        "(  BEST MOODE  ) PLAZO PAR 1007-C.Green",
-        "(  BEST MOODE  ) PLAZO PAR 1008- Chiku",
-        "(  BEST MOODE  ) PLAZO PAR 1008- Grey",
-        "(  BEST MOODE  ) PLAZO PAR 1008- Lavender",
-        "(  BEST MOODE  ) PLAZO PAR 1008- Pink",
-        "(  BEST MOODE  ) PLAZO PAR 1008- Sky Blue",
-        "(  BEST MOODE  ) PLAZO PAR 1008-C.Green",
-        "(  BEST MOODE  ) PLAZO PAR 1008-White",
-        "(  BEST MOODE  ) PLAZO PAR 1010- Chiku",
-        "(  BEST MOODE  ) PLAZO PAR 1010- Pink",
-        "( BEST MOOD  ) PLAZO PAR 1001 - Lavender",
-        "( BEST MOOD  ) PLAZO PAR 1001- C.Green",
-        "( BEST MOOD  ) PLAZO PAR 1001- Chiku",
-        "( BEST MOOD  ) PLAZO PAR 1001- Grey",
-        "( BEST MOOD  ) PLAZO PAR 1001- Pista",
-        "( BEST MOOD  ) PLAZO PAR 1001- Sky Blue",
-        "( BEST MOOD  ) PLAZO PAR 1001- White",
-        "( BEST MOOD  ) PLAZO PAR 1002 - Lavender",
-        "( BEST MOOD  ) PLAZO PAR 1002 - Pink",
-        "( BEST MOOD  ) PLAZO PAR 1002- C.Green",
-        "( BEST MOOD  ) PLAZO PAR 1002- Chiku",
-        "( BEST MOOD  ) PLAZO PAR 1002- Grey",
-        "( BEST MOOD  ) PLAZO PAR 1002- Pista",
-        "( BEST MOOD  ) PLAZO PAR 1002- Sky Blue",
-        "( BEST MOOD  ) PLAZO PAR 1002- White",
-        "( BEST MOOD  ) PLAZO PAR 1003 - Lavender",
-        "( BEST MOOD  ) PLAZO PAR 1003 - Pink",
-        "( BEST MOOD  ) PLAZO PAR 1003- C.Green",
-        "( BEST MOOD  ) PLAZO PAR 1003- Chiku",
-        "( BEST MOOD  ) PLAZO PAR 1003- Grey",
-        "( BEST MOOD  ) PLAZO PAR 1003- Pista",
-        "( BEST MOOD  ) PLAZO PAR 1003- Sky Blue",
-        "( BEST MOOD  ) PLAZO PAR 1003- White",
-        "( BEST MOOD  ) PLAZO PAR 1004 - Lavender",
-        "( BEST MOOD  ) PLAZO PAR 1004 - Pink",
-        "( BEST MOOD  ) PLAZO PAR 1004- C.Green",
-        "( BEST MOOD  ) PLAZO PAR 1004- Chiku",
-        "( BEST MOOD  ) PLAZO PAR 1004- Grey",
-        "( BEST MOOD  ) PLAZO PAR 1004- Pista",
-        "( BEST MOOD  ) PLAZO PAR 1004- Sky Blue",
-        "( BEST MOOD  ) PLAZO PAR 1005 - Pink",
-        "( BEST MOOD  ) PLAZO PAR 1005- C.Green",
-        "( BEST MOOD  ) PLAZO PAR 1005- Pista",
-        "( BEST MOOD  ) PLAZO PAR 1005- Sky Blue",
-        "( BEST MOOD  ) PLAZO PAR 1006 - Lavender",
-        "( BEST MOOD  ) PLAZO PAR 1006 - Pink",
-        "( BEST MOOD  ) PLAZO PAR 1006- C.Green",
-        "( BEST MOOD  ) PLAZO PAR 1006- Chiku",
-        "( BEST MOOD  ) PLAZO PAR 1006- Grey",
-        "( BEST MOOD  ) PLAZO PAR 1006- Pista",
-        "( BEST MOOD  ) PLAZO PAR 1006- Sky Blue",
-        "( BEST MOOD  ) PLAZO PAR 1006- White",
-        "(Best mood ) PLAZO PAR - Lavender11-12 Years",
-        "(Best mood ) PLAZO PAR - Lavender;",
-        "(Best mood ) PLAZO PAR- Grey;",
-        "(Best mood ) PLAZO PAR- Sky Blue",
-        "(Best mood ) PLAZO PAR-White;"
-      ]
+      "skus": []
     },
     {
       "id": 46,
@@ -352,12 +516,64 @@
       "display_order": 1,
       "created_at": "2026-10-12 10:46:56",
       "updated_at": "2026-10-20 03:47:47",
+      "skus": []
+    },
+    {
+      "id": 80,
+      "name": "FULL SLEEVE T SHIRT AND PLAZZO.NEW YORK",
+      "category": "Plazo",
+      "display_order": 1,
+      "created_at": "2026-10-21 09:53:36",
+      "updated_at": "2026-10-21 09:53:36",
+      "skus": [
+        "FULL SLEEVE T SHIRT AND PLAZZO.NEW YORK ( C GREEN )",
+        "FULL SLEEVE T SHIRT AND PLAZZO.NEW YORK ( PINK )",
+        "FULL SLEEVE T SHIRT AND PLAZZO.NEW YORK ( SKY )"
+      ]
+    },
+    {
+      "id": 81,
+      "name": "NICE- full sleeve t shirt and plazzo",
+      "category": "Plazo",
+      "display_order": 1,
+      "created_at": "2026-10-21 09:53:36",
+      "updated_at": "2026-10-21 09:53:36",
+      "skus": [
+        "NICE- full sleeve t shirt and plazzo( C GREEN )",
+        "NICE- full sleeve t shirt and plazzo( CHIKU )",
+        "NICE- full sleeve t shirt and plazzo( CHIKU ),,",
+        "NICE- full sleeve t shirt and plazzo( GRAY )",
+        "NICE- full sleeve t shirt and plazzo( LAVENDER )",
+        "NICE- full sleeve t shirt and plazzo( PINK )",
+        "NICE- full sleeve t shirt and plazzo( PINK ),",
+        "NICE- full sleeve t shirt and plazzo( PINK ),,",
+        "NICE- full sleeve t shirt and plazzo( PISTA )",
+        "NICE- full sleeve t shirt and plazzo( SKY BLUE )",
+        "NICE- full sleeve t shirt and plazzo( SKY BLUE )..",
+        "NICE- full sleeve t shirt and plazzo(pink).."
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Nice Plazo",
+      "category": "Plazo",
+      "display_order": 1,
+      "created_at": "2026-10-12 10:46:56",
+      "updated_at": "2026-10-20 03:47:13",
+      "skus": []
+    },
+    {
+      "id": 82,
+      "name": "PLAAZO PER BE KIND",
+      "category": "Plazo",
+      "display_order": 1,
+      "created_at": "2026-10-21 09:53:36",
+      "updated_at": "2026-10-21 09:53:36",
       "skus": [
         "( BI KIDE  ) PLAZO PAR 1003- Lavender",
         "( BI KIDE  ) PLAZO PAR 1003- Pink",
         "( BI KIDE  ) PLAZO PAR 1005- Chiku11-12 Years",
         "( BI KIDE  ) PLAZO PAR 1005-White",
-        "( NICE  ) PLAZO PAR 1002-White",
         "PLAAZO PER BE KIND (C GREEN).",
         "PLAAZO PER BE KIND (CHIKU);",
         "PLAAZO PER BE KIND (LAVENDER).;",
@@ -375,47 +591,6 @@
         "PLAAZO PER BE KIND 1003 ( GREY )",
         "PLAAZO PER BE KIND 1003 ( PISTA )",
         "PLAAZO PER BE KIND 1003 ( SKY BLUE )"
-      ]
-    },
-    {
-      "id": 34,
-      "name": "Nice Plazo",
-      "category": "Plazo",
-      "display_order": 1,
-      "created_at": "2026-10-12 10:46:56",
-      "updated_at": "2026-10-20 03:47:13",
-      "skus": [
-        "( NICE  ) PLAZO PAR 1001 - Lavender",
-        "( NICE  ) PLAZO PAR 1002 - Pink",
-        "( NICE  ) PLAZO PAR 1002- Chiku",
-        "( NICE  ) PLAZO PAR 1002- Grey",
-        "( NICE  ) PLAZO PAR 1003 - Lavender",
-        "( NICE  ) PLAZO PAR 1003 - Pink",
-        "( NICE  ) PLAZO PAR 1003- Chiku",
-        "( NICE  ) PLAZO PAR 1003- Grey",
-        "( NICE  ) PLAZO PAR 1003- Pista",
-        "( NICE  ) PLAZO PAR 1004 - Lavender",
-        "( NICE  ) PLAZO PAR 1004 - Pink",
-        "( NICE  ) PLAZO PAR 1004- Chiku",
-        "( NICE  ) PLAZO PAR 1004- Grey",
-        "( NICE  ) PLAZO PAR 1004- Pista",
-        "( NICE  ) PLAZO PAR 1004- Sky Blue",
-        "( NICE  ) PLAZO PAR 1004-White",
-        "( NICE  ) PLAZO PAR 1005 - Pink",
-        "( NICE  ) PLAZO PAR 1005- Chiku",
-        "( NICE  ) PLAZO PAR 1005- Grey",
-        "NICE- full sleeve t shirt and plazzo( C GREEN )",
-        "NICE- full sleeve t shirt and plazzo( CHIKU )",
-        "NICE- full sleeve t shirt and plazzo( CHIKU ),,",
-        "NICE- full sleeve t shirt and plazzo( GRAY )",
-        "NICE- full sleeve t shirt and plazzo( LAVENDER )",
-        "NICE- full sleeve t shirt and plazzo( PINK )",
-        "NICE- full sleeve t shirt and plazzo( PINK ),",
-        "NICE- full sleeve t shirt and plazzo( PINK ),,",
-        "NICE- full sleeve t shirt and plazzo( PISTA )",
-        "NICE- full sleeve t shirt and plazzo( SKY BLUE )",
-        "NICE- full sleeve t shirt and plazzo( SKY BLUE )..",
-        "NICE- full sleeve t shirt and plazzo(pink).."
       ]
     },
     {
