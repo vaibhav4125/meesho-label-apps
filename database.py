@@ -5,8 +5,7 @@ import tempfile
 from datetime import datetime
 from contextlib import contextmanager
 
-_cur_dir = os.path.dirname(os.path.abspath(__file__))
-BASE_DIR = os.path.dirname(_cur_dir) if os.path.basename(_cur_dir) == "backend" else _cur_dir
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 BACKUP_DIR = os.path.join(DATA_DIR, "backups")
 os.makedirs(DATA_DIR, exist_ok=True)

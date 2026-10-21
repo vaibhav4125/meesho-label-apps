@@ -3,10 +3,7 @@ import sys
 import socket
 import webbrowser
 import uvicorn
-try:
-    from backend.tunnel import start_tunnel, get_tunnel_status
-except (ImportError, ValueError):
-    from tunnel import start_tunnel, get_tunnel_status
+from backend.tunnel import start_tunnel, get_tunnel_status
 
 def get_local_ip():
     try:
@@ -32,12 +29,9 @@ if __name__ == "__main__":
     print(" [*] Meesho Multi-Account PDF Order Sorting & Merging System")
     print("=" * 70)
 
-    _cur = os.path.dirname(os.path.abspath(__file__))
-    app_module = "backend.main:app" if os.path.exists(os.path.join(_cur, "backend", "main.py")) else "main:app"
-
     if is_cloud:
-        print(f" [OK] Cloud Server Active on 0.0.0.0:{port} (using {app_module})")
-        uvicorn.run(app_module, host=host, port=port, reload=False)
+        print(f" [✓] Cloud Server Active on 0.0.0.0:{port}")
+        uvicorn.run("backend.main:app", host=host, port=port, reload=False)
     else:
         print(f" PC Local Browser:        {local_url}")
         print(f" Mobile (Same Wi-Fi):     {mobile_wifi_url}")

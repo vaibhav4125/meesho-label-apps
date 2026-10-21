@@ -18,7 +18,61 @@ document.addEventListener("DOMContentLoaded", () => {
   setupSearchInputs();
   loadCategories();
   loadDashboard();
+  checkCloudServerStatus();
 });
+
+// Cloud Server Cold-Start Detection & Auto-Reconnection (Render.com free tier)
+async function checkCloudServerStatus() {
+  const banner = document.getElementById("cloud-wake-banner");
+  const bannerText = document.getElementById("cloud-wake-text");
+  if (!banner) return;
+
+  try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 4000);
+    const res = await fetch("/api/health", { signal: controller.signal });
+    clearTimeout(timeoutId);
+
+    if (res.ok) {
+      banner.style.display = "none";
+      return;
+    }
+  } catch (err) {
+    // Cloud server is currently cold-booting or sleeping!
+    banner.style.display = "flex";
+    banner.style.background = "linear-gradient(90deg, #fef3c7, #fffbeb)";
+    banner.style.border = "1px solid #f59e0b";
+    banner.style.color = "#92400e";
+    if (bannerText) {
+      bannerText.innerHTML = `<strong>Cloud Server is waking up...</strong> Render free tier sleeps after 15 min. Automatically reconnecting in ~25s...`;
+    }
+
+    let awake = false;
+    let attempts = 0;
+    while (!awake && attempts < 40) {
+      await new Promise(r => setTimeout(r, 2000));
+      try {
+        const pingRes = await fetch("/api/health");
+        if (pingRes.ok) {
+          awake = true;
+          banner.style.background = "linear-gradient(90deg, #d1fae5, #ecfdf5)";
+          banner.style.border = "1px solid #10b981";
+          banner.style.color = "#065f46";
+          if (bannerText) {
+            bannerText.innerHTML = `<i class="fa-solid fa-circle-check text-emerald" style="margin-right:6px;"></i> <strong>Cloud Server Connected!</strong> Everything is ready.`;
+          }
+          setTimeout(() => {
+            banner.style.display = "none";
+          }, 2500);
+          loadCategories();
+          loadDashboard();
+        }
+      } catch (e) {
+        attempts++;
+      }
+    }
+  }
+}
 
 // Category Management Functions
 async function loadCategories() {
@@ -1178,31 +1232,75 @@ function setupSampleLoader() {
 
     if (prog) {
       prog.style.display = "block";
-      progBar.style.width = "40%";
-      progText.innerText = "Extracting sample label files (1,189 pages)...";
-      progPercent.innerText = "40%";
+      progBar.style.width = "20%";
+      progText.innerText = "Initiating sample files...";
+      progPercent.innerText = "20%";
     }
 
     try {
       const res = await fetch("/api/load-sample", { method: "POST" });
-      const data = await res.json();
-      if (prog) {
-        progBar.style.width = "100%";
-        progPercent.innerText = "100%";
+      if (!res.ok) {
+        const errJson = await res.json().catch(() => ({}));
+        throw new Error(errJson.detail || `Server returned HTTP ${res.status}`);
       }
-      if (data.success) {
-        showToast(`Loaded ${data.loaded.length} sample PDF files (1,189 pages) successfully!`, "success");
-        await loadUploadedFiles();
-        await loadDashboard();
+      const data = await res.json();
+      if (data.success && data.loaded && data.loaded.length > 0) {
+        // Poll background extraction
+        progBar.style.width = "40%";
+        progPercent.innerText = "40%";
+        progText.innerText = `Extracting ${data.loaded.length} sample PDF files...`;
+
+        const pendingIds = data.loaded.map(x => x.file_id);
+        let pollCount = 0;
+        let allDone = false;
+
+        while (pollCount < 120 && !allDone) {
+          await new Promise(r => setTimeout(r, 1500));
+          try {
+            const filesRes = await fetch("/api/files");
+            if (filesRes.ok) {
+              const fileList = await filesRes.json();
+              const relevant = fileList.filter(f => pendingIds.includes(f.id));
+              const stillProcessing = relevant.filter(f => f.status === "processing" || f.status === "pending");
+              const totalExtracted = relevant.reduce((acc, f) => acc + (f.page_count || 0), 0);
+
+              if (relevant.length > 0) {
+                progText.innerText = `Extracting sample PDFs: ${totalExtracted} pages read...`;
+                progBar.style.width = stillProcessing.length === 0 ? "100%" : "70%";
+                progPercent.innerText = stillProcessing.length === 0 ? "100%" : "70%";
+              }
+
+              if (stillProcessing.length === 0) {
+                allDone = true;
+                showToast(`Loaded ${relevant.length} sample PDF files (${totalExtracted} pages) successfully!`, "success");
+                await loadUploadedFiles();
+                await loadDashboard();
+              }
+            }
+          } catch (pollErr) {
+            console.warn("Sample poll error:", pollErr);
+          }
+          pollCount++;
+        }
+
+        if (!allDone) {
+          showToast("Sample files are processing in the background. Check files table shortly.", "info");
+          await loadUploadedFiles();
+          await loadDashboard();
+        }
       } else {
         showToast(data.detail || "Error loading samples", "danger");
       }
     } catch (err) {
-      showToast("Error loading sample files: " + err.message, "danger");
+      if (err.message.includes("Failed to fetch") || err.message.includes("NetworkError")) {
+        showToast("Server connection error: Render cloud server may be waking up. Please wait 15 seconds and try again.", "danger");
+      } else {
+        showToast("Error loading sample files: " + err.message, "danger");
+      }
     } finally {
       setTimeout(() => {
         if (prog) prog.style.display = "none";
-      }, 1200);
+      }, 1500);
     }
   };
 
@@ -1236,35 +1334,88 @@ async function handleFilesUpload(files) {
     const pct = Math.round((i / pdfFiles.length) * 100);
     progBar.style.width = `${pct}%`;
     progPercent.innerText = `${pct}%`;
-    progText.innerText = `Processing file ${i + 1} of ${pdfFiles.length}: ${file.name}...`;
+    progText.innerText = `Uploading file ${i + 1} of ${pdfFiles.length}: ${file.name}...`;
 
     const formData = new FormData();
     formData.append("files", file);
 
     try {
+      // 1. Upload file (fast, streams in 1-2s)
       const res = await fetch("/api/upload", {
         method: "POST",
         body: formData
       });
+
+      if (!res.ok) {
+        const errText = await res.text().catch(() => "");
+        throw new Error(`Server returned HTTP ${res.status}: ${errText.substring(0, 100)}`);
+      }
+
       const data = await res.json();
 
       if (data.success && data.uploaded && data.uploaded.length > 0) {
-        totalProcessed++;
-        const pCnt = data.uploaded[0].page_count;
-        showToast(`Parsed ${file.name}: ${pCnt} pages extracted!`, "success");
-        await loadUploadedFiles();
-        await loadDashboard();
+        const upItem = data.uploaded[0];
+        const fId = upItem.file_id;
+
+        // If completed immediately (e.g. 1-page PDF)
+        if (upItem.status === "completed") {
+          totalProcessed++;
+          const pCnt = upItem.page_count;
+          showToast(`Parsed ${file.name}: ${pCnt} pages extracted!`, "success");
+          await loadUploadedFiles();
+          await loadDashboard();
+        } else {
+          // 2. Poll for background parsing completion
+          progText.innerText = `Extracting orders from ${file.name}...`;
+          let pollAttempts = 0;
+          let isDone = false;
+
+          while (pollAttempts < 240 && !isDone) { // up to 6 minutes
+            await new Promise(r => setTimeout(r, 1500));
+            try {
+              const sRes = await fetch(`/api/files/${fId}/status`);
+              if (sRes.ok) {
+                const sData = await sRes.json();
+                if (sData.status === "completed") {
+                  totalProcessed++;
+                  showToast(`Parsed ${file.name}: ${sData.page_count} pages extracted!`, "success");
+                  await loadUploadedFiles();
+                  await loadDashboard();
+                  isDone = true;
+                } else if (sData.status === "error") {
+                  showToast(`Error processing ${file.name}: ${sData.error_message || "Parsing error"}`, "danger");
+                  isDone = true;
+                } else if (sData.page_count > 0) {
+                  progText.innerText = `Extracting ${file.name}: ${sData.page_count} pages read...`;
+                }
+              }
+            } catch (pollErr) {
+              console.warn("Poll attempt error:", pollErr);
+            }
+            pollAttempts++;
+          }
+
+          if (!isDone) {
+            showToast(`${file.name} is still processing in the background. Check files table shortly.`, "info");
+            await loadUploadedFiles();
+          }
+        }
       } else {
         showToast(`Error processing ${file.name}: ${(data.errors || []).join(", ")}`, "danger");
       }
     } catch (err) {
-      showToast(`Failed uploading ${file.name}: ${err.message}`, "danger");
+      console.error("Upload error:", err);
+      if (err.message.includes("Failed to fetch") || err.message.includes("NetworkError")) {
+        showToast(`Connection error for ${file.name}: Cloud server is waking up or connection dropped. Please wait 15 seconds and try again.`, "danger");
+      } else {
+        showToast(`Failed uploading ${file.name}: ${err.message}`, "danger");
+      }
     }
   }
 
   progBar.style.width = "100%";
   progPercent.innerText = "100%";
-  progText.innerText = `Completed all ${totalProcessed} files!`;
+  progText.innerText = `Completed processing!`;
   if (fileInput) fileInput.value = "";
 
   setTimeout(() => {
