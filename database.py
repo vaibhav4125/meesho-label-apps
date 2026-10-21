@@ -5,7 +5,8 @@ import tempfile
 from datetime import datetime
 from contextlib import contextmanager
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+_cur_dir = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(_cur_dir) if os.path.basename(_cur_dir) == "backend" else _cur_dir
 DATA_DIR = os.path.join(BASE_DIR, "data")
 BACKUP_DIR = os.path.join(DATA_DIR, "backups")
 os.makedirs(DATA_DIR, exist_ok=True)
@@ -45,6 +46,7 @@ def init_db():
             filepath TEXT NOT NULL,
             file_size INTEGER NOT NULL,
             page_count INTEGER DEFAULT 0,
+            total_pages INTEGER DEFAULT 0,
             status TEXT DEFAULT 'pending', -- pending, processing, completed, error
             error_message TEXT,
             uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -123,6 +125,13 @@ def init_db():
             conn.execute("ALTER TABLE product_groups ADD COLUMN category TEXT DEFAULT 'General'")
         if "display_order" not in cols:
             conn.execute("ALTER TABLE product_groups ADD COLUMN display_order INTEGER DEFAULT 0")
+
+        cols_uf = [c[1] for c in conn.execute("PRAGMA table_info(uploaded_files)").fetchall()]
+        if "total_pages" not in cols_uf:
+            try:
+                conn.execute("ALTER TABLE uploaded_files ADD COLUMN total_pages INTEGER DEFAULT 0")
+            except Exception:
+                pass
 
         # Seed default categories if empty
         DEFAULT_CATEGORIES = [

@@ -2,6 +2,7 @@ import os
 import re
 import zipfile
 from collections import defaultdict
+import gc
 import fitz # PyMuPDF
 try:
     from .database import get_db
@@ -228,6 +229,10 @@ def generate_sorted_pdf(
                 # Insert original PDF page directly without rasterization or resizing
                 out_doc.insert_pdf(src_doc, from_page=page_idx, to_page=page_idx)
 
+                if (idx + 1) % 50 == 0:
+                    fitz.TOOLS.store_shrink(100)
+                    gc.collect()
+
             if toc:
                 out_doc.set_toc(toc)
 
@@ -238,7 +243,7 @@ def generate_sorted_pdf(
             out_doc.close()
             for d in src_docs.values():
                 d.close()
-            import gc
+            fitz.TOOLS.store_shrink(100)
             gc.collect()
 
         # 7. Verification checks
@@ -547,6 +552,10 @@ def generate_all_merged_sorted_pdf(
 
                 out_doc.insert_pdf(src_doc, from_page=page_idx, to_page=page_idx)
 
+                if (idx + 1) % 50 == 0:
+                    fitz.TOOLS.store_shrink(100)
+                    gc.collect()
+
             if toc:
                 out_doc.set_toc(toc)
 
@@ -556,6 +565,8 @@ def generate_all_merged_sorted_pdf(
             out_doc.close()
             for d in src_docs.values():
                 d.close()
+            fitz.TOOLS.store_shrink(100)
+            gc.collect()
 
         # Strict Verification Check: Not a single page must be removed or missing!
         expected_page_count = len(sorted_orders)

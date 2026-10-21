@@ -26,15 +26,15 @@ def process_file_records(file_id: int):
         filepath = f["filepath"]
         filename = f["filename"]
 
-        conn.execute("UPDATE uploaded_files SET status = 'processing' WHERE id = ?", (file_id,))
+        conn.execute("UPDATE uploaded_files SET status = 'processing', page_count = 0 WHERE id = ?", (file_id,))
 
     try:
         def update_progress(current_page, total_pages):
             try:
                 with get_db() as conn:
                     conn.execute(
-                        "UPDATE uploaded_files SET page_count = ? WHERE id = ?",
-                        (current_page, file_id)
+                        "UPDATE uploaded_files SET page_count = ?, total_pages = ? WHERE id = ?",
+                        (current_page, total_pages, file_id)
                     )
             except Exception:
                 pass
@@ -74,8 +74,8 @@ def process_file_records(file_id: int):
 
             # Mark completed with page count
             conn.execute(
-                "UPDATE uploaded_files SET status = 'completed', page_count = ? WHERE id = ?",
-                (len(results), file_id)
+                "UPDATE uploaded_files SET status = 'completed', page_count = ?, total_pages = ? WHERE id = ?",
+                (len(results), len(results), file_id)
             )
 
             # Run duplicate detection across all orders

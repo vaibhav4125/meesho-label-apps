@@ -234,7 +234,7 @@ def get_file_status(file_id: int):
     """Get status of an uploaded PDF file being parsed in the background."""
     with get_db() as conn:
         row = conn.execute("""
-            SELECT id, filename, file_size, page_count, status, error_message, uploaded_at
+            SELECT id, filename, file_size, page_count, total_pages, status, error_message, uploaded_at
             FROM uploaded_files
             WHERE id = ?
         """, (file_id,)).fetchone()
@@ -280,6 +280,7 @@ def load_sample_files(background_tasks: BackgroundTasks):
             "file_id": file_id,
             "filename": os.path.basename(dest),
             "page_count": 0,
+            "total_pages": 0,
             "status": "processing"
         })
 
@@ -290,7 +291,7 @@ def list_files():
     """List all uploaded PDF files with status and metadata."""
     with get_db() as conn:
         rows = conn.execute("""
-            SELECT id, filename, file_size, page_count, status, error_message, uploaded_at
+            SELECT id, filename, file_size, page_count, total_pages, status, error_message, uploaded_at
             FROM uploaded_files
             ORDER BY id DESC
         """).fetchall()

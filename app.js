@@ -1357,6 +1357,9 @@ async function handleFilesUpload(files) {
         const upItem = data.uploaded[0];
         const fId = upItem.file_id;
 
+        // Immediately update uploaded files table so the user sees the file in "Processing" state right away!
+        await loadUploadedFiles();
+
         // If completed immediately (e.g. 1-page PDF)
         if (upItem.status === "completed") {
           totalProcessed++;
@@ -1369,33 +1372,62 @@ async function handleFilesUpload(files) {
           progText.innerText = `Extracting orders from ${file.name}...`;
           let pollAttempts = 0;
           let isDone = false;
+          let consecutiveErrors = 0;
 
           while (pollAttempts < 240 && !isDone) { // up to 6 minutes
             await new Promise(r => setTimeout(r, 1500));
             try {
               const sRes = await fetch(`/api/files/${fId}/status`);
               if (sRes.ok) {
+                consecutiveErrors = 0;
                 const sData = await sRes.json();
                 if (sData.status === "completed") {
                   totalProcessed++;
-                  showToast(`Parsed ${file.name}: ${sData.page_count} pages extracted!`, "success");
+                  progBar.style.width = "100%";
+                  progPercent.innerText = "100%";
+                  progText.innerText = `Completed ${file.name}: all ${sData.page_count} pages extracted!`;
+                  showToast(`Parsed ${file.name}: ${sData.page_count} pages extracted successfully!`, "success");
                   await loadUploadedFiles();
                   await loadDashboard();
                   isDone = true;
                 } else if (sData.status === "error") {
                   showToast(`Error processing ${file.name}: ${sData.error_message || "Parsing error"}`, "danger");
+                  await loadUploadedFiles();
                   isDone = true;
-                } else if (sData.page_count > 0) {
-                  progText.innerText = `Extracting ${file.name}: ${sData.page_count} pages read...`;
+                } else {
+                  // In progress
+                  const currentPages = sData.page_count || 0;
+                  const totalP = sData.total_pages || 0;
+                  if (totalP > 0) {
+                    const pct = Math.min(99, Math.max(5, Math.round((currentPages / totalP) * 100)));
+                    progBar.style.width = pct + "%";
+                    progPercent.innerText = pct + "%";
+                    progText.innerText = `Extracting ${file.name}: ${currentPages} / ${totalP} pages (${pct}%)...`;
+                  } else if (currentPages > 0) {
+                    progText.innerText = `Extracting ${file.name}: ${currentPages} pages read...`;
+                  }
+                  // Periodically refresh file table so user sees progress
+                  if (pollAttempts % 4 === 0) {
+                    loadUploadedFiles();
+                  }
                 }
+              } else {
+                consecutiveErrors++;
               }
             } catch (pollErr) {
+              consecutiveErrors++;
               console.warn("Poll attempt error:", pollErr);
             }
+
+            if (consecutiveErrors >= 10) {
+              showToast("Server connection temporarily dropped. Please refresh shortly.", "warning");
+              break;
+            }
+
             pollAttempts++;
           }
 
-          if (!isDone) {
+          if (!isDone && consecutiveErrors < 10) {
             showToast(`${file.name} is still processing in the background. Check files table shortly.`, "info");
             await loadUploadedFiles();
           }
@@ -1429,6 +1461,7 @@ async function loadUploadedFiles() {
     const res = await fetch("/api/files");
     const files = await res.json();
     const tbody = document.querySelector("#files-table tbody");
+    if (!tbody) return;
     tbody.innerHTML = "";
 
     if (files.length === 0) {
@@ -1439,11 +1472,28 @@ async function loadUploadedFiles() {
     files.forEach(f => {
       const tr = document.createElement("tr");
       const sizeMb = (f.file_size / (1024 * 1024)).toFixed(2);
+      const isProc = f.status === "processing";
+      const isComp = f.status === "completed";
+
+      let statusBadge = "";
+      if (isProc) {
+        const pInfo = f.total_pages > 0 ? ` (${f.page_count} / ${f.total_pages})` : (f.page_count > 0 ? ` (${f.page_count} p)` : '');
+        statusBadge = `<span class="badge" style="background:#e0f2fe; color:#0369a1; border:1px solid #bae6fd;"><i class="fa-solid fa-spinner fa-spin" style="margin-right:4px;"></i>Processing${pInfo}</span>`;
+      } else if (isComp) {
+        statusBadge = `<span class="badge badge-success"><i class="fa-solid fa-check" style="margin-right:4px;"></i>Completed</span>`;
+      } else {
+        statusBadge = `<span class="badge badge-danger">${f.status}</span>`;
+      }
+
+      const pagesDisplay = isProc && f.total_pages > 0
+        ? `${f.page_count} / ${f.total_pages}`
+        : `${f.page_count || '-'}`;
+
       tr.innerHTML = `
         <td><i class="fa-solid fa-file-pdf text-indigo" style="margin-right:8px;"></i><strong>${f.filename}</strong></td>
-        <td style="text-align:center;"><strong>${f.page_count}</strong></td>
+        <td style="text-align:center;"><strong>${pagesDisplay}</strong></td>
         <td style="text-align:center;">${sizeMb} MB</td>
-        <td style="text-align:center;"><span class="badge badge-success">${f.status}</span></td>
+        <td style="text-align:center;">${statusBadge}</td>
         <td>${f.uploaded_at ? f.uploaded_at.substring(0, 19).replace('T', ' ') : '-'}</td>
         <td style="text-align:center;">
           <button class="btn btn-danger btn-sm" onclick="deleteUploadedFile(${f.id})">
