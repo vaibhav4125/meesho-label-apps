@@ -1,0 +1,707 @@
+{
+  "version": 1,
+  "saved_at": "2026-10-21T05:38:44.015651",
+  "total_groups": 32,
+  "total_mappings": 330,
+  "categories": [
+    {
+      "name": "Plazo",
+      "label": "👖 Plazo (Top)",
+      "icon": "👖",
+      "display_order": 1
+    },
+    {
+      "name": "Women T-Shirt",
+      "label": "👕 Women T-Shirt (Middle)",
+      "icon": "👕",
+      "display_order": 2
+    },
+    {
+      "name": "men oversized tshirt",
+      "label": "👕 men oversized tshirt",
+      "icon": "👕",
+      "display_order": 2.5
+    },
+    {
+      "name": "Men T-Shirt",
+      "label": "👕 Men T-Shirt",
+      "icon": "👕",
+      "display_order": 3
+    },
+    {
+      "name": "Black Patti",
+      "label": "🏷️ Black Patti",
+      "icon": "🏷️",
+      "display_order": 4
+    },
+    {
+      "name": "General",
+      "label": "📦 General",
+      "icon": "📦",
+      "display_order": 5
+    },
+    {
+      "name": "Other",
+      "label": "📦 Other (Bottom)",
+      "icon": "📦",
+      "display_order": 6
+    },
+    {
+      "name": "WOT = 4 HEART TADDY 12",
+      "label": "🏷️ WOT = 4 HEART TADDY 12",
+      "icon": "🏷️",
+      "display_order": 8
+    }
+  ],
+  "groups": [
+    {
+      "id": 56,
+      "name": "BLACK",
+      "category": "Men T-Shirt",
+      "display_order": 0,
+      "created_at": "2026-10-15 14:57:48",
+      "updated_at": "2026-10-15 15:24:54",
+      "skus": [
+        "BLACK (LAVENDER)",
+        "BLACK (PINK)",
+        "BLACK(BLACK)",
+        "BLACK(GREY)"
+      ]
+    },
+    {
+      "id": 59,
+      "name": "BLACK PATTI EAGLE PINK",
+      "category": "Black Patti",
+      "display_order": 0,
+      "created_at": "2026-10-15 15:26:43",
+      "updated_at": "2026-10-16 09:52:25",
+      "skus": [
+        "BLACK PATTI EAGLE 1 (LAVENDER)",
+        "BLCK PATTI EAGLE (CHIKU)"
+      ]
+    },
+    {
+      "id": 60,
+      "name": "BLACK PATTI matcha lover",
+      "category": "Black Patti",
+      "display_order": 0,
+      "created_at": "2026-10-15 15:28:31",
+      "updated_at": "2026-10-16 09:54:20",
+      "skus": [
+        "V-NECK WOMEN BLACK PATTI MATCHA LOVER   01 ( PISTA )",
+        "V-NECK WOMEN BLACK PATTI MATCHA LOVER   01 ( SKY BLUE )",
+        "V-NECK WOMEN BLACK PATTI MATCHA LOVER   01 ( WHITE )",
+        "V-NECK WOMEN BLACK PATTI MATCHA LOVER   05 ( PISTA )",
+        "V-NECK WOMEN BLACK PATTI MATCHA LOVER   05 ( SKY BLUE )"
+      ]
+    },
+    {
+      "id": 55,
+      "name": "L.A",
+      "category": "Other",
+      "display_order": 0,
+      "created_at": "2026-10-15 14:57:48",
+      "updated_at": "2026-10-15 14:57:48",
+      "skus": [
+        "L.A = BLACK",
+        "L.A = N.BLUE"
+      ]
+    },
+    {
+      "id": 63,
+      "name": "M.O.T. AMBITION",
+      "category": "men oversized tshirt",
+      "display_order": 0,
+      "created_at": "2026-10-16 09:48:34",
+      "updated_at": "2026-10-16 09:49:05",
+      "skus": [
+        "M.O.T. AMBITION 1002 ( PINK )",
+        "M.O.T. AMBITION 1004 ( WHITE )"
+      ]
+    },
+    {
+      "id": 54,
+      "name": "M.O.T. COW HEAD",
+      "category": "men oversized tshirt",
+      "display_order": 0,
+      "created_at": "2026-10-15 14:50:49",
+      "updated_at": "2026-10-16 09:47:09",
+      "skus": [
+        "M.O.T. COW HEAD 01 (WHITE)",
+        "M.O.T. COW HEAD 02 (LAVENDER)"
+      ]
+    },
+    {
+      "id": 64,
+      "name": "M.O.T. KING HEAD",
+      "category": "men oversized tshirt",
+      "display_order": 0,
+      "created_at": "2026-10-16 09:50:57",
+      "updated_at": "2026-10-16 09:51:10",
+      "skus": [
+        "M.O.T.  KING HEAD 01 (SKY BLUE)"
+      ]
+    },
+    {
+      "id": 57,
+      "name": "M.O.T. MONEY",
+      "category": "men oversized tshirt",
+      "display_order": 0,
+      "created_at": "2026-10-15 14:57:48",
+      "updated_at": "2026-10-16 09:53:29",
+      "skus": [
+        "M.O.T. MONEY 01 (CHIKU)",
+        "M.O.T. MONEY 01 (GREY)",
+        "M.O.T. MONEY 01 (LAVENDER)",
+        "M.O.T. MONEY 01 (WHITE)",
+        "M.O.T. MONEY 05 ( C.GREEN )",
+        "M.O.T. MONEY 05 ( CHIKU )",
+        "M.O.T. MONEY 05 ( PINK )",
+        "M.O.T. MONEY 05 ( PISTA )"
+      ]
+    },
+    {
+      "id": 52,
+      "name": "Ms",
+      "category": "Other",
+      "display_order": 0,
+      "created_at": "2026-10-15 14:37:27",
+      "updated_at": "2026-10-15 14:37:27",
+      "skus": [
+        "ms-full sleeve pink",
+        "ms-nyo-black"
+      ]
+    },
+    {
+      "id": 49,
+      "name": "V-NECK WOMEN BLACK PATTI CORD CAT",
+      "category": "Black Patti",
+      "display_order": 0,
+      "created_at": "2026-10-15 06:35:31",
+      "updated_at": "2026-10-16 08:59:21",
+      "skus": [
+        "V-NECK WOMEN BLACK PATTI CORD CAT  02 ( C.GREEN )",
+        "V-NECK WOMEN BLACK PATTI CORD CAT  02 ( PISTA )",
+        "V-NECK WOMEN BLACK PATTI CORD CAT  02 ( SKY BLUE )",
+        "V-NECK WOMEN BLACK PATTI CORD CAT  02 ( WHITE )",
+        "V-NECK WOMEN BLACK PATTI CORD CAT  03 ( LAVENDER )",
+        "V-NECK WOMEN BLACK PATTI CORD CAT  03 ( WHITE )",
+        "V-NECK WOMEN BLACK PATTI CORD CAT  04 ( C.GREEN )",
+        "V-NECK WOMEN BLACK PATTI CORD CAT  04 ( GREY )",
+        "V-NECK WOMEN BLACK PATTI CORD CAT  04 ( LAVENDER )",
+        "V-NECK WOMEN BLACK PATTI CORD CAT  04 ( PISTA )",
+        "V-NECK WOMEN BLACK PATTI CORD CAT  04 ( SKY BLUE )",
+        "V-NECK WOMEN BLACK PATTI CORD CAT  04 ( WHITE )"
+      ]
+    },
+    {
+      "id": 58,
+      "name": "V-NECK WOMEN BLACK PATTI HAPPINESS",
+      "category": "Black Patti",
+      "display_order": 0,
+      "created_at": "2026-10-15 15:19:20",
+      "updated_at": "2026-10-15 15:24:19",
+      "skus": [
+        "V-NECK WOMEN BLACK PATTI HAPPINESS 03  ( WHITE )",
+        "V-NECK WOMEN BLACK PATTI HAPPINESS 04 ( WHITE )",
+        "V-NECK WOMEN BLACK PATTI HAPPINESS 05 ( PINK )"
+      ]
+    },
+    {
+      "id": 61,
+      "name": "V-NECK WOMEN BLACK PATTI OWL ALWAYS",
+      "category": "Black Patti",
+      "display_order": 0,
+      "created_at": "2026-10-15 15:32:41",
+      "updated_at": "2026-10-16 09:52:47",
+      "skus": [
+        "V-NECK WOMEN BLACK PATTI OWL ALWAYS 01 ( LAVENDER )",
+        "V-NECK WOMEN BLACK PATTI OWL ALWAYS 01 ( WHITE )",
+        "V-NECK WOMEN BLACK PATTI OWL ALWAYS 02 ( LAVENDER )",
+        "V-NECK WOMEN BLACK PATTI OWL ALWAYS 02 ( PISTA )",
+        "V-NECK WOMEN BLACK PATTI OWL ALWAYS 02 ( WHITE )"
+      ]
+    },
+    {
+      "id": 62,
+      "name": "V-NECK WOMEN BLACK PATTI POSITIVITY FOREVER",
+      "category": "General",
+      "display_order": 0,
+      "created_at": "2026-10-15 15:33:34",
+      "updated_at": "2026-10-15 15:33:34",
+      "skus": [
+        "V-NECK WOMEN BLACK PATTI POSITIVITY FOREVER 02 ( C.GREEN )",
+        "V-NECK WOMEN BLACK PATTI POSITIVITY FOREVER 03 ( GREY )",
+        "V-NECK WOMEN BLACK PATTI POSITIVITY FOREVER 03 ( SKY BLUE )",
+        "V-NECK WOMEN BLACK PATTI POSITIVITY FOREVER 04 ( GREY )"
+      ]
+    },
+    {
+      "id": 51,
+      "name": "W.O.T. Love Aengel",
+      "category": "Women T-Shirt",
+      "display_order": 0,
+      "created_at": "2026-10-15 14:37:27",
+      "updated_at": "2026-10-15 14:37:27",
+      "skus": [
+        "W.O.T. LOVE AENGEL  (WHITE)",
+        "W.O.T. LOVE AENGEL 0 (C.GREEN)",
+        "W.O.T. LOVE AENGEL 07 (CHIKU)",
+        "W.O.T. LOVE AENGEL 07 (LAVENDER)"
+      ]
+    },
+    {
+      "id": 50,
+      "name": "plazo new york",
+      "category": "Plazo",
+      "display_order": 0,
+      "created_at": "2026-10-15 14:37:27",
+      "updated_at": "2026-10-18 04:32:47",
+      "skus": [
+        "FULL SLEEVE T SHIRT AND PLAZZO.NEW YORK ( C GREEN )",
+        "FULL SLEEVE T SHIRT AND PLAZZO.NEW YORK ( PINK )",
+        "FULL SLEEVE T SHIRT AND PLAZZO.NEW YORK ( SKY )"
+      ]
+    },
+    {
+      "id": 31,
+      "name": "BEST MOOD PLAZO",
+      "category": "Plazo",
+      "display_order": 1,
+      "created_at": "2026-10-12 10:46:56",
+      "updated_at": "2026-10-20 03:46:32",
+      "skus": [
+        "(  BEST MOODE  ) PLAZO PAR 1007- Chiku",
+        "(  BEST MOODE  ) PLAZO PAR 1007- Grey",
+        "(  BEST MOODE  ) PLAZO PAR 1007- Lavender",
+        "(  BEST MOODE  ) PLAZO PAR 1007- Pink",
+        "(  BEST MOODE  ) PLAZO PAR 1007- Pista",
+        "(  BEST MOODE  ) PLAZO PAR 1007- Sky Blue",
+        "(  BEST MOODE  ) PLAZO PAR 1007-C.Green",
+        "(  BEST MOODE  ) PLAZO PAR 1008- Chiku",
+        "(  BEST MOODE  ) PLAZO PAR 1008- Grey",
+        "(  BEST MOODE  ) PLAZO PAR 1008- Lavender",
+        "(  BEST MOODE  ) PLAZO PAR 1008- Pink",
+        "(  BEST MOODE  ) PLAZO PAR 1008- Sky Blue",
+        "(  BEST MOODE  ) PLAZO PAR 1008-C.Green",
+        "(  BEST MOODE  ) PLAZO PAR 1008-White",
+        "(  BEST MOODE  ) PLAZO PAR 1010- Chiku",
+        "(  BEST MOODE  ) PLAZO PAR 1010- Pink",
+        "( BEST MOOD  ) PLAZO PAR 1001 - Lavender",
+        "( BEST MOOD  ) PLAZO PAR 1001- C.Green",
+        "( BEST MOOD  ) PLAZO PAR 1001- Chiku",
+        "( BEST MOOD  ) PLAZO PAR 1001- Grey",
+        "( BEST MOOD  ) PLAZO PAR 1001- Pista",
+        "( BEST MOOD  ) PLAZO PAR 1001- Sky Blue",
+        "( BEST MOOD  ) PLAZO PAR 1001- White",
+        "( BEST MOOD  ) PLAZO PAR 1002 - Lavender",
+        "( BEST MOOD  ) PLAZO PAR 1002 - Pink",
+        "( BEST MOOD  ) PLAZO PAR 1002- C.Green",
+        "( BEST MOOD  ) PLAZO PAR 1002- Chiku",
+        "( BEST MOOD  ) PLAZO PAR 1002- Grey",
+        "( BEST MOOD  ) PLAZO PAR 1002- Pista",
+        "( BEST MOOD  ) PLAZO PAR 1002- Sky Blue",
+        "( BEST MOOD  ) PLAZO PAR 1002- White",
+        "( BEST MOOD  ) PLAZO PAR 1003 - Lavender",
+        "( BEST MOOD  ) PLAZO PAR 1003 - Pink",
+        "( BEST MOOD  ) PLAZO PAR 1003- C.Green",
+        "( BEST MOOD  ) PLAZO PAR 1003- Chiku",
+        "( BEST MOOD  ) PLAZO PAR 1003- Grey",
+        "( BEST MOOD  ) PLAZO PAR 1003- Pista",
+        "( BEST MOOD  ) PLAZO PAR 1003- Sky Blue",
+        "( BEST MOOD  ) PLAZO PAR 1003- White",
+        "( BEST MOOD  ) PLAZO PAR 1004 - Lavender",
+        "( BEST MOOD  ) PLAZO PAR 1004 - Pink",
+        "( BEST MOOD  ) PLAZO PAR 1004- C.Green",
+        "( BEST MOOD  ) PLAZO PAR 1004- Chiku",
+        "( BEST MOOD  ) PLAZO PAR 1004- Grey",
+        "( BEST MOOD  ) PLAZO PAR 1004- Pista",
+        "( BEST MOOD  ) PLAZO PAR 1004- Sky Blue",
+        "( BEST MOOD  ) PLAZO PAR 1005 - Pink",
+        "( BEST MOOD  ) PLAZO PAR 1005- C.Green",
+        "( BEST MOOD  ) PLAZO PAR 1005- Pista",
+        "( BEST MOOD  ) PLAZO PAR 1005- Sky Blue",
+        "( BEST MOOD  ) PLAZO PAR 1006 - Lavender",
+        "( BEST MOOD  ) PLAZO PAR 1006 - Pink",
+        "( BEST MOOD  ) PLAZO PAR 1006- C.Green",
+        "( BEST MOOD  ) PLAZO PAR 1006- Chiku",
+        "( BEST MOOD  ) PLAZO PAR 1006- Grey",
+        "( BEST MOOD  ) PLAZO PAR 1006- Pista",
+        "( BEST MOOD  ) PLAZO PAR 1006- Sky Blue",
+        "( BEST MOOD  ) PLAZO PAR 1006- White",
+        "(Best mood ) PLAZO PAR - Lavender11-12 Years",
+        "(Best mood ) PLAZO PAR - Lavender;",
+        "(Best mood ) PLAZO PAR- Grey;",
+        "(Best mood ) PLAZO PAR- Sky Blue",
+        "(Best mood ) PLAZO PAR-White;"
+      ]
+    },
+    {
+      "id": 46,
+      "name": "BEST MOOD PLAZO PAR 1001- C.Green",
+      "category": "Plazo",
+      "display_order": 1,
+      "created_at": "2026-10-14 06:30:52",
+      "updated_at": "2026-10-14 06:30:52",
+      "skus": []
+    },
+    {
+      "id": 35,
+      "name": "Be Kind Plazo",
+      "category": "Plazo",
+      "display_order": 1,
+      "created_at": "2026-10-12 10:46:56",
+      "updated_at": "2026-10-20 03:47:47",
+      "skus": [
+        "( BI KIDE  ) PLAZO PAR 1003- Lavender",
+        "( BI KIDE  ) PLAZO PAR 1003- Pink",
+        "( BI KIDE  ) PLAZO PAR 1005- Chiku11-12 Years",
+        "( BI KIDE  ) PLAZO PAR 1005-White",
+        "( NICE  ) PLAZO PAR 1002-White",
+        "PLAAZO PER BE KIND (C GREEN).",
+        "PLAAZO PER BE KIND (CHIKU);",
+        "PLAAZO PER BE KIND (LAVENDER).;",
+        "PLAAZO PER BE KIND (LAVENDWR).;",
+        "PLAAZO PER BE KIND (PINK)'",
+        "PLAAZO PER BE KIND (PISTA).;",
+        "PLAAZO PER BE KIND (SKY BLUE).",
+        "PLAAZO PER BE KIND (SKY BLUE).;",
+        "PLAAZO PER BE KIND (WHITE).;",
+        "PLAAZO PER BE KIND (c green)",
+        "PLAAZO PER BE KIND (lavender).",
+        "PLAAZO PER BE KIND (pink)",
+        "PLAAZO PER BE KIND 1003 ( C.GREEN )",
+        "PLAAZO PER BE KIND 1003 ( CHIKU )",
+        "PLAAZO PER BE KIND 1003 ( GREY )",
+        "PLAAZO PER BE KIND 1003 ( PISTA )",
+        "PLAAZO PER BE KIND 1003 ( SKY BLUE )"
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Nice Plazo",
+      "category": "Plazo",
+      "display_order": 1,
+      "created_at": "2026-10-12 10:46:56",
+      "updated_at": "2026-10-20 03:47:13",
+      "skus": [
+        "( NICE  ) PLAZO PAR 1001 - Lavender",
+        "( NICE  ) PLAZO PAR 1002 - Pink",
+        "( NICE  ) PLAZO PAR 1002- Chiku",
+        "( NICE  ) PLAZO PAR 1002- Grey",
+        "( NICE  ) PLAZO PAR 1003 - Lavender",
+        "( NICE  ) PLAZO PAR 1003 - Pink",
+        "( NICE  ) PLAZO PAR 1003- Chiku",
+        "( NICE  ) PLAZO PAR 1003- Grey",
+        "( NICE  ) PLAZO PAR 1003- Pista",
+        "( NICE  ) PLAZO PAR 1004 - Lavender",
+        "( NICE  ) PLAZO PAR 1004 - Pink",
+        "( NICE  ) PLAZO PAR 1004- Chiku",
+        "( NICE  ) PLAZO PAR 1004- Grey",
+        "( NICE  ) PLAZO PAR 1004- Pista",
+        "( NICE  ) PLAZO PAR 1004- Sky Blue",
+        "( NICE  ) PLAZO PAR 1004-White",
+        "( NICE  ) PLAZO PAR 1005 - Pink",
+        "( NICE  ) PLAZO PAR 1005- Chiku",
+        "( NICE  ) PLAZO PAR 1005- Grey",
+        "NICE- full sleeve t shirt and plazzo( C GREEN )",
+        "NICE- full sleeve t shirt and plazzo( CHIKU )",
+        "NICE- full sleeve t shirt and plazzo( CHIKU ),,",
+        "NICE- full sleeve t shirt and plazzo( GRAY )",
+        "NICE- full sleeve t shirt and plazzo( LAVENDER )",
+        "NICE- full sleeve t shirt and plazzo( PINK )",
+        "NICE- full sleeve t shirt and plazzo( PINK ),",
+        "NICE- full sleeve t shirt and plazzo( PINK ),,",
+        "NICE- full sleeve t shirt and plazzo( PISTA )",
+        "NICE- full sleeve t shirt and plazzo( SKY BLUE )",
+        "NICE- full sleeve t shirt and plazzo( SKY BLUE )..",
+        "NICE- full sleeve t shirt and plazzo(pink).."
+      ]
+    },
+    {
+      "id": 40,
+      "name": "Burger Lovers 01",
+      "category": "Women T-Shirt",
+      "display_order": 2,
+      "created_at": "2026-10-12 10:46:56",
+      "updated_at": "2026-10-20 03:57:20",
+      "skus": [
+        "burger lovers 01 (chiku)",
+        "burger lovers 01 (gray)",
+        "burger lovers 01 (pink)",
+        "burger lovers 01 (pista.)",
+        "burger lovers 01 (white)"
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Hug Me Taddy",
+      "category": "Women T-Shirt",
+      "display_order": 2,
+      "created_at": "2026-10-12 10:46:56",
+      "updated_at": "2026-10-20 03:55:58",
+      "skus": [
+        "HUG ME TADDY (GREY)",
+        "W.H.T. Hug Me Taddy ( C.Green).",
+        "W.H.T. Hug Me Taddy ( Chiku)",
+        "W.H.T. Hug Me Taddy ( Chiku).",
+        "W.H.T. Hug Me Taddy ( Gray).",
+        "W.H.T. Hug Me Taddy ( Lavender).",
+        "W.H.T. Hug Me Taddy ( Pink).",
+        "W.H.T. Hug Me Taddy ( Pista).",
+        "W.H.T. Hug Me Taddy ( Sky Blue).",
+        "W.H.T. Hug Me Taddy ( White).",
+        "W.H.T. Hug Me Taddy .( C.Green)",
+        "W.H.T. Hug Me Taddy .( Chiku)",
+        "W.H.T. Hug Me Taddy .( Gray)",
+        "W.H.T. Hug Me Taddy .( LAVENDER)",
+        "W.H.T. Hug Me Taddy .( Pink)",
+        "W.H.T. Hug Me Taddy .( Pista)",
+        "W.H.T. Hug Me Taddy .( Sky Blue)",
+        "W.H.T. Hug Me Taddy .( White)",
+        "W.H.T.2.HUG ME TADDY  ( CHIKU )",
+        "W.H.T.2.HUG ME TADDY  ( GRAY )",
+        "W.H.T.2.HUG ME TADDY  ( LAVENDER )",
+        "W.H.T.2.HUG ME TADDY  ( PISTA )",
+        "W.H.T.2.HUG ME TADDY  ( SKY BLUE )",
+        "W.H.T.2.HUG ME TADDY  ( WHITE )",
+        "W.H.T.2.HUG ME TADDY  (PINK )",
+        "W.H.T.YOUR SOUL ( WHITE )",
+        "W.O.T HUG ME  TADDY 1007 ( C.GREEN)",
+        "W.O.T HUG ME  TADDY 1007 ( CHIKU )",
+        "W.O.T HUG ME  TADDY 1007 ( GREY )",
+        "W.O.T HUG ME  TADDY 1007 ( LAVENDER)",
+        "W.O.T HUG ME  TADDY 1007 ( PINK)",
+        "W.O.T HUG ME  TADDY 1007 ( PISTA)",
+        "W.O.T HUG ME  TADDY 1007 ( SKY BLUE)",
+        "W.O.T HUG ME  TADDY 1007 ( WHITE)",
+        "W.O.T HUG ME TADDY 1001 ( LAVENDER)",
+        "W.O.T HUG ME TADDY 1001 ( PINK)",
+        "W.O.T HUG ME TADDY 1001 ( PISTA)",
+        "W.O.T HUG ME TADDY 1001 ( SKY BLUE)",
+        "W.O.T HUG ME TADDY 1001 ( WHITE)",
+        "W.O.T HUG ME TADDY 1002 ( C.GREEN)",
+        "W.O.T HUG ME TADDY 1002 ( LAVENDER)",
+        "W.O.T HUG ME TADDY 1002 ( PINK)",
+        "W.O.T HUG ME TADDY 1002 ( PISTA)",
+        "W.O.T HUG ME TADDY 1002 ( SKY BLUE)",
+        "W.O.T HUG ME TADDY 1002 ( WHITE)",
+        "W.O.T HUG ME TADDY 1002( WHITE)",
+        "W.O.T HUG ME TADDY 1003 ( C.GREEN)",
+        "W.O.T HUG ME TADDY 1003 ( LAVENDER)",
+        "W.O.T HUG ME TADDY 1003 ( PINK)",
+        "W.O.T HUG ME TADDY 1003 ( PISTA)",
+        "W.O.T HUG ME TADDY 1003 ( SKY BLUE)",
+        "W.O.T HUG ME TADDY 1003 ( WHITE)",
+        "W.O.T HUG ME TADDY 1004( LAVENDER)",
+        "W.O.T HUG ME TADDY 1004( PINK)",
+        "W.O.T HUG ME TADDY 1004( PISTA)",
+        "W.O.T HUG ME TADDY 1004( SKY BLUE)",
+        "W.O.T HUG ME TADDY 1005( LAVENDER)",
+        "W.O.T HUG ME TADDY 1005( PINK)",
+        "W.O.T HUG ME TADDY 1005( PISTA)",
+        "W.O.T HUG ME TADDY 1005( SKY BLUE)",
+        "W.O.T HUG ME TADDY 1005( WHITE)",
+        "W.O.T HUG ME TADDY 1006( LAVENDER)",
+        "W.O.T HUG ME TADDY 1006( PINK)",
+        "W.O.T HUG ME TADDY 1006( PISTA)",
+        "W.O.T HUG ME TADDY 1006( SKY BLUE)",
+        "W.O.T HUG ME TADDY 1006( WHITE)",
+        "W.O.T. GOOD VIBES ONLY 05(CHIKU)",
+        "W.O.T. THE BEST BEAR TADDY (PINK)",
+        "W.O.T. THE BEST BEAR TADDY (WHITE)",
+        "W.O.T. THE BEST BEAR TADDY 01 (C.GREEN)",
+        "hug me taddy 03 ( grey )",
+        "hug me taddy 03 ( lavender )",
+        "hug me taddy 03 ( sky blue )",
+        "hug me taddy 03 ( white )",
+        "hug me taddy 1 (c.green)",
+        "hug me teddy 04 (chiku)",
+        "hug me teddy 04 (lavender)",
+        "hug me teddy 04 (sky blue)",
+        "hug me teddy 04 (white)"
+      ]
+    },
+    {
+      "id": 33,
+      "name": "IFM",
+      "category": "Men T-Shirt",
+      "display_order": 2,
+      "created_at": "2026-10-12 10:46:56",
+      "updated_at": "2026-10-15 15:24:36",
+      "skus": [
+        "IFM(LAVENDER)",
+        "ifm (black)",
+        "ifm (cream)",
+        "ifm (gray)",
+        "ifm (pink)",
+        "ifm (pista)"
+      ]
+    },
+    {
+      "id": 45,
+      "name": "IFM New York",
+      "category": "Men T-Shirt",
+      "display_order": 2,
+      "created_at": "2026-10-13 14:23:40",
+      "updated_at": "2026-10-16 05:25:05",
+      "skus": [
+        "IFM NEW YORK (CREEM)",
+        "ifm new york",
+        "ifm new york gray",
+        "ms-nyo-pista",
+        "new york ifm"
+      ]
+    },
+    {
+      "id": 48,
+      "name": "M.O.T AMBITION",
+      "category": "men oversized tshirt",
+      "display_order": 2,
+      "created_at": "2026-10-14 06:44:35",
+      "updated_at": "2026-10-16 09:47:13",
+      "skus": [
+        "M.O.T. AMBITION 1002 ( CHIKU )",
+        "M.O.T. AMBITION 1004 ( GREY )",
+        "M.O.T. AMBITION 1005 ( CHIKU )",
+        "M.O.T. AMBITION 1005 ( PISTA )",
+        "M.O.T.AMBITION (LAVENDER)"
+      ]
+    },
+    {
+      "id": 42,
+      "name": "Mot = Chaos",
+      "category": "men oversized tshirt",
+      "display_order": 2,
+      "created_at": "2026-10-12 10:46:56",
+      "updated_at": "2026-10-16 09:46:58",
+      "skus": [
+        "MOT = CHAOS (C.GREEN)",
+        "MOT = CHAOS (SKY BLUE)"
+      ]
+    },
+    {
+      "id": 43,
+      "name": "Mot = Wild",
+      "category": "men oversized tshirt",
+      "display_order": 2,
+      "created_at": "2026-10-12 10:46:56",
+      "updated_at": "2026-10-16 09:47:16",
+      "skus": [
+        "MOT = WILD WEST ( C GREEN)",
+        "MOT = WILD WEST ( LAVENDER)"
+      ]
+    },
+    {
+      "id": 38,
+      "name": "Mot= Egal Fredoom",
+      "category": "men oversized tshirt",
+      "display_order": 2,
+      "created_at": "2026-10-12 10:46:56",
+      "updated_at": "2026-10-16 09:47:01",
+      "skus": [
+        "MOT = EAGLE FREEDOM (WHITE)",
+        "MOT= EGAL FREDOOM ( C.CREEN)",
+        "MOT= EGAL FREDOOM ( SKY BLUE)",
+        "MOT= EGAL FREDOOM (CHIKU)",
+        "MOT= EGAL FREDOOM (WHITE)"
+      ]
+    },
+    {
+      "id": 41,
+      "name": "Team Minato 01",
+      "category": "Women T-Shirt",
+      "display_order": 2,
+      "created_at": "2026-10-12 10:46:56",
+      "updated_at": "2026-10-12 10:46:56",
+      "skus": [
+        "M.O.T. TEAM MINATO 01 (CHIKU)",
+        "M.O.T. TEAM MINATO 01 (SKY BLUE)"
+      ]
+    },
+    {
+      "id": 37,
+      "name": "V neck hug me teddy",
+      "category": "Black Patti",
+      "display_order": 2,
+      "created_at": "2026-10-12 10:46:56",
+      "updated_at": "2026-10-20 04:03:13",
+      "skus": [
+        "V NACK WOMEN BLACK PATTI HUG ME TADDY1005 ( C.GREEN)",
+        "V NACK WOMEN BLACK PATTI HUG ME TADDY1005 ( LAVENDER)",
+        "V NACK WOMEN BLACK PATTI HUG ME TADDY1005 ( PINK)",
+        "V NACK WOMEN BLACK PATTI HUG ME TADDY1005 ( PISTA)",
+        "V NACK WOMEN BLACK PATTI HUG ME TADDY1005 ( SKY BLUE)",
+        "V NACK WOMEN BLACK PATTI HUG ME TADDY1005 ( WHITE)",
+        "V NACK WOMEN BLACK PATTI HUG ME TADDY1005 (GREY)",
+        "V NACK WOMEN BLACK PATTI HUG ME TADDY1006 ( C.GREEN)",
+        "V NACK WOMEN BLACK PATTI HUG ME TADDY1006 ( LAVENDER)",
+        "V NACK WOMEN BLACK PATTI HUG ME TADDY1006 ( PINK)",
+        "V NACK WOMEN BLACK PATTI HUG ME TADDY1006 ( PISTA)",
+        "V NACK WOMEN BLACK PATTI HUG ME TADDY1006 ( SKY BLUE)",
+        "V NACK WOMEN BLACK PATTI HUG ME TADDY1006 ( WHITE)",
+        "V NACK WOMEN BLACK PATTI HUG ME TADDY1006 (GREY)",
+        "V NACK WOMEN BLACK PATTI HUG ME TADDY1007 ( SKY BLUE)",
+        "V NACK WOMEN BLACK PATTI HUG ME TADDY1007 ( WHITE)",
+        "V NACK WOMEN BLACK PATTI HUG ME TADDY1007 (GREY)",
+        "V-NECK WOMEN BLACK PATTI HUG ME TEDDY 01 ( WHITE )",
+        "V-NECK WOMEN BLACK PATTI HUG ME TEDDY 02( PISTA )",
+        "V-NECK WOMEN BLACK PATTI HUG ME TEDDY 03 ( C.GREEN )",
+        "V-NECK WOMEN BLACK PATTI HUG ME TEDDY 03 ( LAVENDERRRRRRRRRRRRRRRRRR )",
+        "V-NECK WOMEN BLACK PATTI HUG ME TEDDY 03 ( PISTA )",
+        "V-NECK WOMEN BLACK PATTI HUG ME TEDDY 04 ( PINK )",
+        "V-NECK WOMEN BLACK PATTI HUG ME TEDDY 04 ( WHITE )",
+        "V-NECK WOMEN BLACK PATTI HUG ME TEDDY 05 (VENDER)",
+        "V-NECK WOMEN BLACK PATTI HUG ME TEDDY 06 (LAVENDER)",
+        "V-NECK WOMEN BLACK PATTI HUG ME TEDDY 06 (PINK)",
+        "V-NECK WOMEN BLACK PATTI HUG ME TEDDY 06 (PISTA)",
+        "V-NECK WOMEN BLACK PATTI HUG ME TEDDY 06 (WHITE)",
+        "V-NECK WOMEN BLACK PATTI HUG ME TEDDY 07 (GREY)",
+        "V-NECK WOMEN BLACK PATTI HUG ME TEDDY 07 (PINK)",
+        "V-NECK WOMEN BLACK PATTI HUG ME TEDDY 08 (GREY)",
+        "V-NECK WOMEN BLACK PATTI HUG ME TEDDY 08 (WHITE)"
+      ]
+    },
+    {
+      "id": 39,
+      "name": "W.O.T. The Best bear",
+      "category": "Women T-Shirt",
+      "display_order": 2,
+      "created_at": "2026-10-12 10:46:56",
+      "updated_at": "2026-10-20 03:59:36",
+      "skus": [
+        "W.O.T. THE BEST BEAR TADDY (CHIKU)",
+        "W.O.T. THE BEST BEAR TADDY (GREY)",
+        "W.O.T. THE BEST BEAR TADDY (PISTA)",
+        "W.O.T. THE BEST BEAR TADDY (SKY BLUE)"
+      ]
+    },
+    {
+      "id": 44,
+      "name": "W.O.T.Love Angel 01",
+      "category": "Women T-Shirt",
+      "display_order": 2,
+      "created_at": "2026-10-12 10:46:56",
+      "updated_at": "2026-10-20 03:58:24",
+      "skus": [
+        "W.O.T.  LOVE ANGEL (CHIKU)",
+        "W.O.T. LOVE AENGEL 07 (SKY BLUE)",
+        "W.O.T.LOVE ANGEL 01 (PINK)",
+        "W.O.T.LOVE ANGEL 01 (PISTA)",
+        "W.O.T.LOVE ANGEL 01 (SKY BLUE)"
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Test Merged Group",
+      "category": "Other",
+      "display_order": 3,
+      "created_at": "2026-10-12 10:38:56",
+      "updated_at": "2026-10-14 06:53:02",
+      "skus": [
+        "TEST_SKU_A",
+        "TEST_SKU_B"
+      ]
+    }
+  ]
+}
